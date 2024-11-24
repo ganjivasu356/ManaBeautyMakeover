@@ -5,22 +5,23 @@ import AppointementTwoImg from "../../Assets/AppointMentTwo.jpeg";
 
 const AppointmentSection = () => {
   return (
-    <Box>
+    <Box sx={{ mt: 4 }}>
+      {/* Image Section */}
       <Box
         display="flex"
+        flexDirection={{ xs: "column", md: "row" }}
         width="100%"
-        height="500px"
+        height={{ xs: "auto", md: "500px" }}
         position="relative"
-        sx={{ mt: 4 }}
       >
         {/* First Image */}
         <Box
           component="img"
-          src={AppointementTwoImg} // Replace with your second image URL
+          src={AppointementTwoImg}
           alt="Salon Interior"
           sx={{
-            width: "50%",
-            height: "100%",
+            width: { xs: "100%", md: "50%" },
+            height: { xs: "300px", md: "100%" },
             objectFit: "cover",
           }}
         />
@@ -28,11 +29,11 @@ const AppointmentSection = () => {
         {/* Second Image */}
         <Box
           component="img"
-          src={AppointeMentOneImg} // Replace with your first image URL
+          src={AppointeMentOneImg}
           alt="Spa Treatment"
           sx={{
-            width: "50%",
-            height: "100%",
+            width: { xs: "100%", md: "50%" },
+            height: { xs: "300px", md: "100%" },
             objectFit: "cover",
           }}
         />
@@ -45,9 +46,9 @@ const AppointmentSection = () => {
             left: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: 2,
-            width: { xs: "90%", sm: "60%", md: "40%" },
+            width: { xs: "90%", sm: "70%", md: "40%" },
             textAlign: "center",
-            padding: "20px",
+            p: 3,
             backgroundColor: "rgba(255, 255, 255, 0.9)",
             boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
           }}
@@ -56,27 +57,27 @@ const AppointmentSection = () => {
             Working Hours
           </Typography>
           <Box
-            display={"flex"}
-            flexDirection={"row"}
+            display="flex"
+            flexDirection={{ xs: "column", sm: "row" }}
             gap={2}
-            justifyContent={"center"}
+            justifyContent="center"
             sx={{ mb: 2 }}
           >
             <Typography variant="body1" gutterBottom>
               Monday – Sunday
             </Typography>
             <Typography variant="body1" gutterBottom>
-              09:30 AM – 10:00PM
+              09:30 AM – 10:00 PM
             </Typography>
           </Box>
           <Divider sx={{ backgroundColor: "black" }} />
 
           <Box sx={{ m: 2 }}>
             <Typography variant="h4" gutterBottom>
-              Appoitments
+              Appointments
             </Typography>
             <Typography variant="body1" gutterBottom>
-              MIG II 96,9th phase KPHB Colony, Kukatpally, HYDERABAD, Telangana
+              MIG II 96, 9th Phase KPHB Colony, Kukatpally, Hyderabad, Telangana
               - 500085.
             </Typography>
           </Box>
@@ -84,9 +85,9 @@ const AppointmentSection = () => {
             <Button
               variant="contained"
               color="primary"
-              sx={{ margin: "0 10px", backgroundColor: "#638e8a" }}
+              sx={{ mx: 1, backgroundColor: "#638e8a" }}
             >
-              Book An Appoitment
+              Book An Appointment
             </Button>
           </Box>
         </Card>

@@ -20,25 +20,25 @@ const services = {
       title: "Hair Service",
       description:
         "Transform your look and indulge in luxury with bespoke beauty treatments crafted to celebrate your unique charm.",
-      image: HairServiceTwo, // Replace with actual image URL
+      image: HairServiceTwo,
     },
     {
       title: "Skin Service",
       description:
         "Experience premium skincare solutions, expertly curated for women, to nurture and enhance your natural radiance.",
-      image: SkinServiceTwo, // Replace with actual image URL
+      image: SkinServiceTwo,
     },
     {
       title: "Nail Service",
       description:
         "Treat yourself to a personalized manicure, designed specifically for women, and enjoy a luxurious nail care experience.",
-      image: NailService, // Replace with actual image URL
+      image: NailService,
     },
     {
       title: "Makeup",
       description:
         "Unleash your inner beauty with our professional makeup services, carefully crafted to accentuate your unique features.",
-      image: MakeUpSerivce, // Replace with actual image URL
+      image: MakeUpSerivce,
     },
   ],
 };
@@ -51,10 +51,18 @@ const ServicesSection = () => {
   };
 
   return (
-    <Box sx={{ padding: 4 }} id="services">
-      <Typography variant="h4" align="center" gutterBottom>
+    <Box sx={{ padding: { xs: 2, md: 4 } }} id="services">
+      {/* Section Title */}
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        sx={{ fontSize: { xs: "1.8rem", md: "2.2rem" } }}
+      >
         Our Services
       </Typography>
+
+      {/* Tabs */}
       <Tabs
         value={selectedTab}
         onChange={handleTabChange}
@@ -62,7 +70,7 @@ const ServicesSection = () => {
         sx={{
           marginBottom: 4,
           "& .MuiTabs-indicator": {
-            backgroundColor: "white", // Sets the underline color to white
+            backgroundColor: "white",
           },
         }}
       >
@@ -70,33 +78,30 @@ const ServicesSection = () => {
           label="Women"
           value="Women"
           sx={{
-            color: "rgba(255, 255, 255, 0.7)", // Default text color for unselected tabs
+            color: "rgba(255, 255, 255, 0.7)",
             "&.Mui-selected": {
-              color: "white", // Text color for the selected tab
+              color: "white",
             },
           }}
         />
-        {/* <Tab
-    label="Men"
-    value="Men"
-    sx={{
-      color: "rgba(255, 255, 255, 0.7)",
-      "&.Mui-selected": {
-        color: "white",
-      },
-    }}
-  /> */}
       </Tabs>
 
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={4}>
+      {/* Services Cards */}
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={{ xs: 2, md: 4 }}
+      >
         {services[selectedTab].map((service, index) => (
           <Card
             key={index}
             sx={{
-              maxWidth: 280,
+              maxWidth: { xs: "100%", sm: 280 }, // Full-width on mobile
               textAlign: "center",
               boxShadow: 3,
               borderRadius: 2,
+              flex: "1 1 100%", // Adjust width for smaller screens
             }}
           >
             <CardMedia
@@ -109,14 +114,20 @@ const ServicesSection = () => {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ fontWeight: "bold" }}
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: { xs: "1rem", md: "1.25rem" },
+                }}
               >
                 {service.title}
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
-                sx={{ marginBottom: 1 }}
+                sx={{
+                  marginBottom: 1,
+                  fontSize: { xs: "0.875rem", md: "1rem" },
+                }}
               >
                 {service.description}
               </Typography>

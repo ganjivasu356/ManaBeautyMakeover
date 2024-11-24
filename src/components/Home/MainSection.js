@@ -7,7 +7,7 @@ const MainSection = () => {
     <Box
       sx={{
         position: "relative",
-        height: "60vh",
+        height: { xs: "80vh", sm: "60vh" }, // Taller for smaller screens
         backgroundImage: `url(${homeImage})`, // Ensure the path is correct
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -21,19 +21,27 @@ const MainSection = () => {
       }}
       id="home"
     >
-      <Box sx={{ position: "absolute", left: "22%", top: "36%" }}>
-        <Box display={"flex"} flexDirection={"column"}>
+      <Box
+        sx={{
+          position: "absolute",
+          left: { xs: "10%", sm: "22%" }, // Adjust position for smaller screens
+          top: { xs: "30%", sm: "36%" },
+          width: { xs: "80%", sm: "auto" }, // Adjust width for mobile
+        }}
+      >
+        <Box display="flex" flexDirection="column">
           <Typography
             variant="h2"
             sx={{
               fontWeight: "bold",
               mb: 2,
-              px: 2, // Padding for better spacing within the background
-              backgroundColor: "#f0f0f0", // Background color for clarity
-              background: "linear-gradient(to right, black, #638e8a)", // Gradient text
+              px: 2,
+              backgroundColor: "#f0f0f0",
+              background: "linear-gradient(to right, black, #638e8a)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              display: "inline-block", // Ensures the background color wraps the text only
+              display: "inline-block",
+              fontSize: { xs: "2rem", sm: "3rem", md: "4rem" }, // Responsive font size
             }}
           >
             MANA
@@ -48,12 +56,20 @@ const MainSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               display: "inline-block",
+              fontSize: { xs: "1rem", sm: "1.5rem", md: "1.75rem" }, // Responsive font size
             }}
           >
             Beauty & Makeover Studio
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", gap: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" }, // Stack buttons on mobile
+            gap: 2,
+            justifyContent: "center", // Center-align buttons on mobile
+          }}
+        >
           <Button
             variant="outlined"
             sx={{
@@ -61,6 +77,9 @@ const MainSection = () => {
               color: "black",
               border: "none",
               fontWeight: "bold",
+              px: { xs: 2, sm: 3 },
+              py: { xs: 1, sm: 1.5 },
+              fontSize: { xs: "0.8rem", sm: "1rem" }, // Responsive font size
             }}
           >
             Call Now: +91 99634 62243
@@ -72,6 +91,9 @@ const MainSection = () => {
               color: "black",
               border: "none",
               fontWeight: "bold",
+              px: { xs: 2, sm: 3 },
+              py: { xs: 1, sm: 1.5 },
+              fontSize: { xs: "0.8rem", sm: "1rem" }, // Responsive font size
             }}
           >
             Book Online

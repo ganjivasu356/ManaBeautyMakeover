@@ -6,7 +6,7 @@ import massageImg from "../../Assets/FaceMassage.jpeg";
 
 const AboutSection = () => {
   return (
-    <Box sx={{ mt: 4 }} id="about">
+    <Box sx={{ mt: 4, px: 2 }} id="about">
       {/* About Section */}
       <Box
         sx={{
@@ -17,7 +17,14 @@ const AboutSection = () => {
         }}
       >
         <Box sx={{ flex: 1 }}>
-          <Card sx={{ p: 2, boxShadow: 3, position: "relative", left: "8%" }}>
+          <Card
+            sx={{
+              p: 2,
+              boxShadow: 3,
+              position: "relative",
+              left: { xs: "0", md: "8%" }, // Center on mobile
+            }}
+          >
             <CardContent>
               <Typography variant="h5" fontWeight="bold" gutterBottom>
                 About MANA Beauty & Makeover Studio
@@ -31,12 +38,6 @@ const AboutSection = () => {
                 where your satisfaction is our top priority, and let us help you
                 shine with confidence and elegance.`}
               </Typography>
-              {/* <Typography variant="body1" gutterBottom>
-                It is our goal to ensure every customer leaves feeling like
-                their best self thanks to our team of skilled professionals. Our
-                goal at Adorn & Admire isn’t just to make people look good; we
-                are also dedicated to creating happiness.
-              </Typography> */}
               <Button
                 variant="outlined"
                 sx={{
@@ -44,7 +45,7 @@ const AboutSection = () => {
                   color: "black",
                   fontWeight: "bold",
                   borderColor: "black",
-                  marginTop: "8px",
+                  mt: 2,
                 }}
               >
                 Read More
@@ -52,11 +53,16 @@ const AboutSection = () => {
             </CardContent>
           </Card>
         </Box>
-        <Box sx={{ flex: 1 }}>
+        <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
           <img
-            src={HairClean} // Replace with your image URL
+            src={HairClean}
             alt="Hair Styling"
-            style={{ width: "630px", height: "480px", borderRadius: "8px" }}
+            style={{
+              width: "100%",
+              maxWidth: "600px",
+              height: "auto",
+              borderRadius: "8px",
+            }}
           />
         </Box>
       </Box>
@@ -64,19 +70,20 @@ const AboutSection = () => {
       {/* Experience Section */}
       <Box
         display="flex"
+        flexDirection={{ xs: "column", md: "row" }}
         width="100%"
-        height="500px"
+        height={{ xs: "auto", md: "500px" }}
         position="relative"
         sx={{ mt: 4 }}
       >
         {/* First Image */}
         <Box
           component="img"
-          src={ChairsImage} // Replace with your first image URL
+          src={ChairsImage}
           alt="Salon Interior"
           sx={{
-            width: "50%",
-            height: "100%",
+            width: { xs: "100%", md: "50%" },
+            height: { xs: "300px", md: "100%" },
             objectFit: "cover",
           }}
         />
@@ -84,11 +91,11 @@ const AboutSection = () => {
         {/* Second Image */}
         <Box
           component="img"
-          src={massageImg} // Replace with your second image URL
+          src={massageImg}
           alt="Spa Treatment"
           sx={{
-            width: "50%",
-            height: "100%",
+            width: { xs: "100%", md: "50%" },
+            height: { xs: "300px", md: "100%" },
             objectFit: "cover",
           }}
         />
@@ -101,7 +108,7 @@ const AboutSection = () => {
             left: "50%",
             transform: "translate(-50%, -50%)",
             zIndex: 2,
-            width: { xs: "90%", sm: "60%", md: "40%" },
+            width: { xs: "90%", sm: "70%", md: "40%" },
             textAlign: "center",
             padding: "20px",
             backgroundColor: "rgba(255, 255, 255, 0.9)",
@@ -119,7 +126,7 @@ const AboutSection = () => {
             <Button
               variant="contained"
               color="primary"
-              sx={{ margin: "0 10px", backgroundColor: "#638e8a" }}
+              sx={{ mx: 1, backgroundColor: "#638e8a" }}
             >
               MANA Beauty & Makeover Salon
             </Button>
@@ -127,7 +134,7 @@ const AboutSection = () => {
               variant="outlined"
               color="primary"
               sx={{
-                margin: "0 10px",
+                mx: 1,
                 color: "#638e8a",
                 borderColor: "#638e8a",
               }}
@@ -146,7 +153,7 @@ const AboutSection = () => {
           flexDirection: { xs: "column", md: "row" },
           gap: 4,
         }}
-      ></Box>
+      />
     </Box>
   );
 };

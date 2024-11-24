@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Typography, Link } from "@mui/material";
-import { Email, Facebook, Phone, Room } from "@mui/icons-material";
-import { YouTube, Instagram } from "@mui/icons-material";
+import {
+  Email,
+  Facebook,
+  Phone,
+  Room,
+  YouTube,
+  Instagram,
+} from "@mui/icons-material";
 import { menuItems } from "../utility/constants";
 
 const Footer = () => {
@@ -15,13 +21,14 @@ const Footer = () => {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
-        alignItems: "flex-start",
-        gap: 4,
+        alignItems: { xs: "center", md: "flex-start" },
+        gap: { xs: 4, md: 6 },
+        textAlign: { xs: "center", md: "left" },
       }}
       id="contactUs"
     >
       {/* Logo and Description */}
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, maxWidth: { xs: "100%", md: "25%" } }}>
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
           MANA Beauty & Makeover Studio
         </Typography>
@@ -30,7 +37,14 @@ const Footer = () => {
           leaving our clients feeling not just pampered, but truly radiant and
           inspired.
         </Typography>
-        <Box sx={{ mt: 2, display: "flex", gap: 2 }}>
+        <Box
+          sx={{
+            mt: 2,
+            display: "flex",
+            justifyContent: { xs: "center", md: "flex-start" },
+            gap: 2,
+          }}
+        >
           <Link
             href="https://www.facebook.com/share/p/15G9fkzBDm/"
             target="_blank"
@@ -56,7 +70,7 @@ const Footer = () => {
       </Box>
 
       {/* Quick Links */}
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, maxWidth: { xs: "100%", md: "20%" } }}>
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
           Quick Links
         </Typography>
@@ -77,7 +91,7 @@ const Footer = () => {
       </Box>
 
       {/* Services */}
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, maxWidth: { xs: "100%", md: "20%" } }}>
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
           Services
         </Typography>
@@ -89,24 +103,45 @@ const Footer = () => {
       </Box>
 
       {/* Contact Us */}
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ flex: 1, maxWidth: { xs: "100%", md: "25%" } }}>
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
           Contact Us
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            mt: 1,
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
           <Room sx={{ mr: 1 }} />
           <Typography variant="body2">
-            MIG II 96,9th phase KPHB Colony, Kukatpally, HYDERABAD, Telangana -
+            MIG II 96, 9th phase KPHB Colony, Kukatpally, HYDERABAD, Telangana -
             500085.
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            mt: 1,
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
           <Phone sx={{ mr: 1 }} />
           <Typography variant="body2">
-            ++91 99634 62243 | +91 76718 07502
+            +91 99634 62243 | +91 76718 07502
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            mt: 1,
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
           <Email sx={{ mr: 1 }} />
           <Typography variant="body2">
             manabeautyandmakeoverstudio@gmail.com
