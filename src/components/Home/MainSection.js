@@ -36,10 +36,11 @@ const MainSection = () => {
               fontWeight: "bold",
               mb: 2,
               px: 2,
-              backgroundColor: "#f0f0f0",
-              background: "linear-gradient(to right, black, #638e8a)",
+              color: "#638e8a",
+              textShadow: "white 1px 1px",
+              // background: "linear-gradient(to right, black, #638e8a)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              // WebkitTextFillColor: "transparent",
               display: "inline-block",
               fontSize: { xs: "2rem", sm: "3rem", md: "4rem" }, // Responsive font size
             }}
@@ -51,10 +52,12 @@ const MainSection = () => {
             sx={{
               mb: 4,
               px: 2,
-              backgroundColor: "#f0f0f0",
-              background: "linear-gradient(to right, black, #638e8a)",
+              color: "#638e8a",
+              textShadow: "white 1px 1px",
+              // backgroundColor: "#f0f0f0",
+              // background: "linear-gradient(to right, black, #638e8a)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              // WebkitTextFillColor: "transparent",
               display: "inline-block",
               fontSize: { xs: "1rem", sm: "1.5rem", md: "1.75rem" }, // Responsive font size
             }}

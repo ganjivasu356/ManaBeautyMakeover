@@ -14,7 +14,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
-import ManaLogo from "../Assets/ManaLogo.jpeg";
+import ManaLogo from "../Assets/manaBeautyHome.jpg";
 import { menuItems } from "../utility/constants";
 
 const Header: React.FC = () => {
