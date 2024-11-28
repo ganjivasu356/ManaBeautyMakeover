@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/ManaBeautyMakeover/static/css/main.523651d2.css",
-    "main.js": "/ManaBeautyMakeover/static/js/main.43ddd92c.js",
+    "main.js": "/ManaBeautyMakeover/static/js/main.97da13c4.js",
     "static/js/453.dbb4036b.chunk.js": "/ManaBeautyMakeover/static/js/453.dbb4036b.chunk.js",
+    "static/media/manaBeautyHome.jpg": "/ManaBeautyMakeover/static/media/manaBeautyHome.70728141f45a388dd8f1.jpg",
     "static/media/home.jpeg": "/ManaBeautyMakeover/static/media/home.e4aeb167e4047c14963e.jpeg",
     "static/media/Chairs.jpeg": "/ManaBeautyMakeover/static/media/Chairs.45a78cd420be52fd62e6.jpeg",
     "static/media/NailService.jpeg": "/ManaBeautyMakeover/static/media/NailService.1ef206307e7db22952dd.jpeg",
@@ -11,16 +12,15 @@
     "static/media/HairServiceTwo.jpeg": "/ManaBeautyMakeover/static/media/HairServiceTwo.44300f14b2142b5e2d07.jpeg",
     "static/media/MakeUpSerivce.jpeg": "/ManaBeautyMakeover/static/media/MakeUpSerivce.2a6ccf06e0b12c971a28.jpeg",
     "static/media/FaceMassage.jpeg": "/ManaBeautyMakeover/static/media/FaceMassage.563ed41d93b8d39aab73.jpeg",
-    "static/media/ManaLogo.jpeg": "/ManaBeautyMakeover/static/media/ManaLogo.8d8764ffc3ed64c753a6.jpeg",
     "static/media/HairClean.jpeg": "/ManaBeautyMakeover/static/media/HairClean.cee320204d81468fcc58.jpeg",
     "static/media/AppointmentOne.jpeg": "/ManaBeautyMakeover/static/media/AppointmentOne.3d4ddd81912719ce9c05.jpeg",
     "index.html": "/ManaBeautyMakeover/index.html",
     "main.523651d2.css.map": "/ManaBeautyMakeover/static/css/main.523651d2.css.map",
-    "main.43ddd92c.js.map": "/ManaBeautyMakeover/static/js/main.43ddd92c.js.map",
+    "main.97da13c4.js.map": "/ManaBeautyMakeover/static/js/main.97da13c4.js.map",
     "453.dbb4036b.chunk.js.map": "/ManaBeautyMakeover/static/js/453.dbb4036b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.523651d2.css",
-    "static/js/main.43ddd92c.js"
+    "static/js/main.97da13c4.js"
   ]
 }
