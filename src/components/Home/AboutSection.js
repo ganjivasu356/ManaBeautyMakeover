@@ -41,10 +41,10 @@ const AboutSection = () => {
               <Button
                 variant="outlined"
                 sx={{
-                  background: "white",
-                  color: "black",
+                  // background: "white",
+                  // color: "black",
                   fontWeight: "bold",
-                  borderColor: "black",
+                  // borderColor: "black",
                   mt: 2,
                 }}
               >

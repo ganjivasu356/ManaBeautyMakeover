@@ -76,7 +76,7 @@ const Footer = () => {
         </Typography>
         {menuItems.map((item) => (
           <Link
-            href="#"
+            // href="#"
             key={item}
             sx={{
               display: "block",
