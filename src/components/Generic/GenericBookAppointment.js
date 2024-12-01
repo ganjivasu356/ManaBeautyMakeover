@@ -41,6 +41,19 @@ const GenericBookAppointment = ({ open, setOpen, handleClose }) => {
     return newErrors;
   };
 
+  // const handleSubmit = () => {
+  //   const newErrors = validate();
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setErrors(newErrors);
+  //     return;
+  //   }
+
+  //   console.log("Appointment Details:", formData);
+  //   alert("Appointment request sent!");
+  //   setOpen(false);
+  //   resetFormState();
+  // };
+
   const handleSubmit = () => {
     const newErrors = validate();
     if (Object.keys(newErrors).length > 0) {
@@ -48,10 +61,31 @@ const GenericBookAppointment = ({ open, setOpen, handleClose }) => {
       return;
     }
 
-    console.log("Appointment Details:", formData);
-    alert("Appointment request sent!");
-    setOpen(false);
-    resetFormState();
+    // Construct form data for Google Form
+    const googleFormAction =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfG3KQguxzXchWm0ixVgrouIa7F4RCnDtC_T1G_Bftz8GBWQw/formResponse";
+    const formDataToSubmit = new FormData();
+
+    // Replace `entry.XXXX` with the actual entry IDs from your Google Form
+    formDataToSubmit.append("entry.1907151706", formData.name); // Field for "name"
+    formDataToSubmit.append("entry.144489558", formData.mobile); // Field for "mobile"
+    formDataToSubmit.append("entry.1989800351", formData.date); // Field for "date"
+
+    // Send the POST request
+    fetch(googleFormAction, {
+      method: "POST",
+      body: formDataToSubmit,
+      mode: "no-cors", // Required to prevent CORS issues
+    })
+      .then(() => {
+        alert("Appointment request sent to Google Form!");
+        setOpen(false);
+        resetFormState();
+      })
+      .catch((error) => {
+        console.error("Error submitting form: ", error);
+        alert("There was an issue submitting the form.");
+      });
   };
 
   const resetFormState = () => {
