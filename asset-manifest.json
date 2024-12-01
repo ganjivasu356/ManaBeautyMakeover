@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ManaBeautyMakeover/static/css/main.523651d2.css",
-    "main.js": "/ManaBeautyMakeover/static/js/main.2d59620c.js",
+    "main.js": "/ManaBeautyMakeover/static/js/main.e1645acb.js",
     "static/js/453.dbb4036b.chunk.js": "/ManaBeautyMakeover/static/js/453.dbb4036b.chunk.js",
     "static/media/manaBeautyHome.jpg": "/ManaBeautyMakeover/static/media/manaBeautyHome.70728141f45a388dd8f1.jpg",
     "static/media/home.jpeg": "/ManaBeautyMakeover/static/media/home.e4aeb167e4047c14963e.jpeg",
@@ -16,11 +16,11 @@
     "static/media/AppointmentOne.jpeg": "/ManaBeautyMakeover/static/media/AppointmentOne.3d4ddd81912719ce9c05.jpeg",
     "index.html": "/ManaBeautyMakeover/index.html",
     "main.523651d2.css.map": "/ManaBeautyMakeover/static/css/main.523651d2.css.map",
-    "main.2d59620c.js.map": "/ManaBeautyMakeover/static/js/main.2d59620c.js.map",
+    "main.e1645acb.js.map": "/ManaBeautyMakeover/static/js/main.e1645acb.js.map",
     "453.dbb4036b.chunk.js.map": "/ManaBeautyMakeover/static/js/453.dbb4036b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.523651d2.css",
-    "static/js/main.2d59620c.js"
+    "static/js/main.e1645acb.js"
   ]
 }
